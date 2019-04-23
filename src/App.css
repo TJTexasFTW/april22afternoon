@@ -1,33 +1,130 @@
-.App {
+body {
+  background-color: darkgray;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: green;
+  list-style-type: none;
+  height: 100;
+  width: 30vw;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 50px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: gold;
+  font-style: italic;
+}
+
+li {
+  /* display: inline; */
+  /* float: right; */
+  font-style: normal;
+  font-size: 10pt;
+  color: white;
+  text-align: right;
+  text-decoration: none;
+}
+
+/* li a {
+  /* display: block; */
+  /* color: white;
+  text-align: right;
+  text-decoration: none; */
+/* } */ */
+
+body {
+  /* background-image: url("paper.gif"); */
+  background-color: beige;
+ }
+
+nav img {
+  display: none;
+  border: 1px;
+  border-color: red;
+  border-style: solid;
+}
+
+.mobileMenu- {
+  display: none;
+}
+
+.Welcome {
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.TellMe {
+  background:gold; 
+  /* display: inline-block; */
+  /* float: right; */
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 1.2em;
+  height: 80px;
+  width: 240px;
+  border-radius: 9px; 
+  text-align:center;
+  display: block;
+  /* max-width: 300px; */
+  margin: auto;
+  /* display: flex;  */
+  /* justify-content: center;  */
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media(max-width: 800px) {
+  ul {
+    display: none;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  nav img {
+    display: block;
+    width: 20px;
+    height: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .smallMenu {
+    display: block;
+    margin-left: 10px;
   }
+
+  .mobileMenu-open {
+    display: block;
+    animation: openMenu 1s;
+  }
+  .mobileMenu-closed {
+    display: none;
+    animation: closeMenu 1s;
+    animation-fill-mode: forwards;
+
+    @keyframes openMenu {
+      from {
+        width: 0vw;
+      }
+      to {
+        width: 30vw;
+      }
+    }
+    
+    @keyframes closeMenu {
+      from {
+        width: 30vw;
+      }
+      to {
+        width: 0vw;
+      }
+    }
+
+
+  }
+
 }
