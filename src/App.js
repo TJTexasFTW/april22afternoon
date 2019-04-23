@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
+
   class App extends Component {
     constructor() {
       super();
@@ -10,6 +11,7 @@ import './App.css';
     }
     
     handleClick = () => {
+   
       if(this.state.menuStatus === 'open') {
         this.setState({
           menuStatus: 'closed'
@@ -21,7 +23,12 @@ import './App.css';
       }
     }
 
+    
     render() {
+
+
+
+
       return (
     <div className="App">
     <nav>
@@ -35,11 +42,11 @@ import './App.css';
           <li><a></a></li>
 
         </ul>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQFRypROy2g5WEeVVPF7fImQKSxMQwd44t_3fA1yQROCKLEdFirA" alt="Hamburger Menu"/>
+        <img  onClick={this.handleClick} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQFRypROy2g5WEeVVPF7fImQKSxMQwd44t_3fA1yQROCKLEdFirA" alt="Hamburger Menu"/>
     </nav>
 
 <body>
-    <div className="mobileMenu-">
+    <div className = {'side-menu-' + this.state.menuStatus}>
       <p>SERVICES</p>
       <p>PORTFOLIO</p>
       <p>ABOUT</p>

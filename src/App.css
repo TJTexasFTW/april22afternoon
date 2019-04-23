@@ -1,5 +1,5 @@
 body {
-  background-color: darkgray;
+  background-color:slategrey;
 }
 
 ul {
@@ -16,7 +16,7 @@ ul {
 
 nav {
   height: 50px;
-  background-color: gray;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -40,11 +40,11 @@ li {
   text-align: right;
   text-decoration: none; */
 /* } */ */
-
-body {
-  /* background-image: url("paper.gif"); */
-  background-color: beige;
- }
+ 
+.Welcome {
+  color: white;
+  text-align: center;
+}
 
 nav img {
   display: none;
@@ -53,16 +53,37 @@ nav img {
   border-style: solid;
 }
 
-.mobileMenu- {
+.side-menu- {
   display: none;
 }
 
-.Welcome {
+.content {
   color: white;
   text-align: center;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+
+    /* padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden; */
+    transition: max-height 0.2s ease-out;
+
 }
 
 .TellMe {
+  /* background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px; */
+
+
   background:gold; 
   /* display: inline-block; */
   /* float: right; */
@@ -76,7 +97,7 @@ nav img {
   text-align:center;
   display: block;
   /* max-width: 300px; */
-  margin: auto;
+  margin: auto; 
   /* display: flex;  */
   /* justify-content: center;  */
 }
@@ -92,37 +113,45 @@ nav img {
     height: 20px;
   }
 
-  .smallMenu {
-    display: block;
-    margin-left: 10px;
-  }
-
-  .mobileMenu-open {
+  .side-menu-open {
     display: block;
     animation: openMenu 1s;
   }
-  .mobileMenu-closed {
+  .side-menu-closed {
     display: none;
     animation: closeMenu 1s;
     animation-fill-mode: forwards;
 
-    @keyframes openMenu {
+  @keyframes openMenu {
       from {
-        width: 0vw;
+        height: 0hw;
       }
       to {
-        width: 30vw;
+        height: 30hw;
       }
     }
     
     @keyframes closeMenu {
       from {
-        width: 30vw;
+        height: 30hw;
       }
       to {
-        width: 0vw;
+        height: 0hw;
       }
     }
+
+    /* .collapsible:after {
+      content: '\02795'; 
+      font-size: 13px;
+      color: white;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .active:after {
+      content: "\2796"; 
+    } */
+
 
 
   }
