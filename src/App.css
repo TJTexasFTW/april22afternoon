@@ -27,20 +27,15 @@ nav {
 li {
   /* display: inline; */
   /* float: right; */
-  font-style: normal;
-  font-size: 10pt;
+  font-style: initial;
+  font-size: 12pt;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
   color: white;
   text-align: right;
   text-decoration: none;
 }
 
-/* li a {
-  /* display: block; */
-  /* color: white;
-  text-align: right;
-  text-decoration: none; */
-/* } */ */
- 
 .Welcome {
   color: white;
   text-align: center;
@@ -57,36 +52,26 @@ nav img {
   display: none;
 }
 
-.content {
-  color: white;
-  text-align: center;
-  padding: 0 18px;
+.side-menu-closed {
   display: none;
-  overflow: hidden;
-
-    /* padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden; */
-    transition: max-height 0.2s ease-out;
-
 }
 
+h2 {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+
+h3 {
+  font-family: 'Kaushan Script',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+};
+
 .TellMe {
-  /* background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px; */
-
-
   background:gold; 
-  /* display: inline-block; */
-  /* float: right; */
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
@@ -96,10 +81,22 @@ nav img {
   border-radius: 9px; 
   text-align:center;
   display: block;
-  /* max-width: 300px; */
-  margin: auto; 
-  /* display: flex;  */
-  /* justify-content: center;  */
+  margin: auto;
+}
+
+button {
+    background:gold; 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.2em;
+    height: 80px;
+    width: 240px;
+    border-radius: 9px; 
+    text-align:center;
+    display: block;
+    margin: auto;
+  
 }
 
 @media(max-width: 800px) {
@@ -116,11 +113,15 @@ nav img {
   .side-menu-open {
     display: block;
     animation: openMenu 1s;
+    animation-iteration-count: 1;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    /* transition: height 2s; */
   }
   .side-menu-closed {
     display: none;
     animation: closeMenu 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;}
 
   @keyframes openMenu {
       from {
@@ -140,20 +141,5 @@ nav img {
       }
     }
 
-    /* .collapsible:after {
-      content: '\02795'; 
-      font-size: 13px;
-      color: white;
-      float: right;
-      margin-left: 5px;
-    }
-    
-    .active:after {
-      content: "\2796"; 
-    } */
-
-
-
   }
 
-}

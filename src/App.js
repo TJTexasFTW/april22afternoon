@@ -32,7 +32,7 @@ import './App.css';
       return (
     <div className="App">
     <nav>
-      <h1>Start Bootstrap</h1>
+      <h3>Start Bootstrap</h3>
         <ul>
           <li>SERVICES</li>
           <li><a>PORTFOLIO</a></li>
@@ -58,8 +58,8 @@ import './App.css';
     <h2>Welcome To Our Studio!</h2>
     <h1>IT'S NICE TO MEET YOU</h1>
 </div>
-        <div >
-              <button className="TellMe">TELL ME MORE</button>
+        <div className="TellMeButton" >
+            <button className="TellMe">TELL ME MORE</button>
         </div>
 
 
