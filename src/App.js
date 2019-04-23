@@ -11,23 +11,34 @@ import './App.css';
     }
     
     handleClick = () => {
-   
+    
       if(this.state.menuStatus === 'open') {
         this.setState({
           menuStatus: 'closed'
         })
+        this.changeHeightClosed();
+        // "document.getElementById('chartdiv').style.height = '200px'
       } else {
         this.setState({
           menuStatus: 'open'
         })
+        this.changeHeightOpen();
       }
+
+
+     
+
     }
 
-    
+    changeHeightClosed() {
+      // document.getElementById('side-menu-closed').style.height = '0px';
+    }
+
+    changeHeightOpen() {
+      // document.getElementById('side-menu-open').style.height = '30px';
+    }
+
     render() {
-
-
-
 
       return (
     <div className="App">

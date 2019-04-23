@@ -54,6 +54,7 @@ nav img {
 
 .side-menu-closed {
   display: none;
+  height: 0vh;
 }
 
 h2 {
@@ -110,18 +111,28 @@ button {
     height: 20px;
   }
 
+  img:click {
+    height: 300px;
+    background-color: purple;
+  }
+
   .side-menu-open {
     display: block;
     animation: openMenu 1s;
     animation-iteration-count: 1;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    /* transition: height 2s; */
+    height: 20vh;
+    transition: height 21s;
   }
   .side-menu-closed {
     display: none;
     animation: closeMenu 1s;
-    animation-fill-mode: forwards;}
+    animation-fill-mode: forwards;
+    /* height: 0vh; */
+    transition: height 12s;
+  }
+
 
   @keyframes openMenu {
       from {
